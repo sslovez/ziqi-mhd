@@ -13,7 +13,6 @@
       </a>
     </header>
     <!-- 首页头部 end -->
-
     <!-- 轮播图 begin -->
     <Swiper class="my-swiper" @change="onChange">
       <SwiperItem>
@@ -59,18 +58,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+//引入公用的mixins.scss
+@import "@/assets/styles/mixins.scss";
 .page-home {
   height: 100%;
   display: flex;
   flex-direction: column;
 
   .index-header {
+    @include boder-bottom;
     display: flex;
     height: 44px;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
+    // border-bottom: 1px solid #e9e9e9;
 
     .user-btn {
       width: 25px;
@@ -92,7 +95,7 @@ export default {
     }
   }
 
-  .my-swiper img{
+  .my-swiper img {
     width: 100%;
   }
 }

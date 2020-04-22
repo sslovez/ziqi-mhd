@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper-container">
+  <div class="swiper-container" ref="swiper">
     <div class="swiper-wrapper">
       <!-- <div class="swiper-slide">Slide 1</div>
       <div class="swiper-slide">Slide 2</div>
@@ -28,9 +28,11 @@ export default {
     }
   },
   mounted () {
+    // console.log(this.$refs.swiper)
     const that = this
     /* eslint-disable */
-    new Swiper(".swiper-container", {
+    //$el 是组件根元素的DOM对象
+    new Swiper(this.$el, {
       pagination: {
         el: ".swiper-pagination"
       },
